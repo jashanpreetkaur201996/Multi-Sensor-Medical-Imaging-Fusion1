@@ -1,11 +1,11 @@
 
 function fusion_perform_fn(xrcw,x)
 
-x{1} = im2double(imread("F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\CT3.tif"));
-x{2} = im2double(imread("F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\MRI3.tif"));
+x{1} = im2double(imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\CT3.tif')); 
+x{2} = im2double(imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\MRI3.tif'));
 
 % Read the fused image
-xrcw = imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\FusedImage3.tif');  % Replace with your fused image file
+xrcw = imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\FusedImage3.png');  % Replace with your fused image file
 
 %%% fusion_perform_fn: Computes the Fusion Performance Parameters.
 %%% 
