@@ -1,15 +1,15 @@
 % Read input images
-mri = imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\CT3.tif');         % Replace with your MRI image filename
-ct = imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\MRI3.tif');           % Replace with your CT image filename
-fused = imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\FusedImage3.tif');     % Replace with your fused image filename
+s1 = imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\CT3.tif');         % Replace with your Source1 image filename
+s2 = imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\MRI3.tif');        % Replace with your Source2 image filename
+fused = imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\FusedImage3.tif');  % Replace with your fused image filename
 
-% Convert to gra    yscale if images are RGB
-if size(mri, 3) == 3
-    mri = rgb2gray(mri);
+% Convert to grayscale if images are RGB
+if size(s1, 3) == 3
+    s1 = rgb2gray(s1);
 end
 
-if size(ct, 3) == 3
-    ct = rgb2gray(ct);
+if size(s2, 3) == 3
+    s2 = rgb2gray(s2);
 end
 
 if size(fused, 3) == 3
@@ -17,32 +17,32 @@ if size(fused, 3) == 3
 end
 
 % Convert images to double for statistical calculation
-mri = double(mri);
-ct = double(ct);
+s1 = double(s1);
+s2 = double(s2);
 fused = double(fused);
 
 % Reshape to 1D arrays
-mri_vals = mri(:);
-ct_vals = ct(:);
+s1_vals = s1(:);
+s2_vals = s2(:);
 fused_vals = fused(:);
 
 % Mean
-mean_mri = mean(mri_vals);
-mean_ct = mean(ct_vals);
+mean_s1 = mean(s1_vals);
+mean_s2 = mean(s2_vals);
 mean_fused = mean(fused_vals);
 
 % Median
-median_mri = median(mri_vals);
-median_ct = median(ct_vals);
+median_s1 = median(s1_vals);
+median_s2 = median(s2_vals);
 median_fused = median(fused_vals);
 
 % Mode (convert to uint8 for mode computation)
-mode_mri = mode(uint8(mri_vals));
-mode_ct = mode(uint8(ct_vals));
+mode_s1 = mode(uint8(s1_vals));
+mode_s2 = mode(uint8(s2_vals));
 mode_fused = mode(uint8(fused_vals));
 
 % Display results
 fprintf('--- Statistics ---\n');
-fprintf('MRI:    Mean = %.2f, Median = %.2f, Mode = %d\n', mean_mri, median_mri, mode_mri);
-fprintf('CT:     Mean = %.2f, Median = %.2f, Mode = %d\n', mean_ct, median_ct, mode_ct);
+fprintf('S1:     Mean = %.2f, Median = %.2f, Mode = %d\n', mean_s1, median_s1, mode_s1);
+fprintf('S2:     Mean = %.2f, Median = %.2f, Mode = %d\n', mean_s2, median_s2, mode_s2);
 fprintf('Fused:  Mean = %.2f, Median = %.2f, Mode = %d\n', mean_fused, median_fused, mode_fused);
