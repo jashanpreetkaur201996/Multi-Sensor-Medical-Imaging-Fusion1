@@ -1,7 +1,7 @@
 % Read input images
-s1 = imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\CT3.tif');         % Replace with your Source1 image filename
-s2 = imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\MRI3.tif');        % Replace with your Source2 image filename
-fused = imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\FusedImage3.tif');  % Replace with your fused image filename
+s1 = imread('c01_1.tif');         % Replace with your Source1 image filename
+s2 = imread('c01_2.tif');        % Replace with your Source2 image filename
+fused = imread('Fused1.png');     % Replace with your fused image filename
 
 % Convert to grayscale if images are RGB
 if size(s1, 3) == 3
