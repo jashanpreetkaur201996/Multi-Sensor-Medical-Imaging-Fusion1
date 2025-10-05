@@ -1,11 +1,4 @@
-
 function fusion_perform_fn(xrcw,x)
-
-x{1} = im2double(imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\CT3.tif')); 
-x{2} = im2double(imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\MRI3.tif'));
-
-% Read the fused image
-xrcw = imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\FusedImage3.png');  % Replace with your fused image file
 
 %%% fusion_perform_fn: Computes the Fusion Performance Parameters.
 %%% 
@@ -16,6 +9,10 @@ xrcw = imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\FusedImage3.png
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%% Fusion Performance Parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+x{1} = imread('c01_1.tif');
+x{2} = imread('c01_2.tif');
+xrcw  = imread('Fused1.png');
+
 %%% Average Pixel Intensity (API) or Mean.
 API=mean(xrcw(:))
 
@@ -77,8 +74,6 @@ FS2=2-abs((MIBF/(MIAF+MIBF))-0.5);
 diffF=xrcw-API;
 meanA=mean(x{1}(:)); diffA=x{1}-meanA;
 meanB=mean(x{2}(:)); diffB=x{2}-meanB;
-diffA = double(diffA);
-diffF = double(diffF);
 rAF=sum(sum((diffA.*diffF)))/(sqrt(sum(sum(diffA.^2))*sum(sum(diffF.^2))));
 rBF=sum(sum((diffB.*diffF)))/(sqrt(sum(sum(diffB.^2))*sum(sum(diffF.^2))));
 corr=(rAF+rBF)/2
