@@ -9,8 +9,6 @@ function [jhist_out]=joint_hist_fn(x1,x2)
 %%% Author : B. K. SHREYAMSHA KUMAR 
 %%% Created on 21-10-2011.
 %%% Updated on 21-10-2011.
-x1 = uint8(x1 * 255);  % Scale to 0-255 range
-x2 = uint8(x2 * 255);
 
 [p,q]=size(x1);
 jhist_out=zeros(256,256);
