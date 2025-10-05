@@ -22,14 +22,8 @@ function [QABF,LABF,NABF,NABF1]=objective_fusion_perform_fn(xrcw,x)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Petrovic Metrics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 %%% Parameters for Petrovic Metrics Computation.
-
-x{1} = im2double(imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\CT3.tif'));
-x{2} = im2double(imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\MRI3.tif'));
-
-% Read the fused image
-xrcw = imread('F:\JASHAN\Fusion\MedicalFusionMain\Dataset Images\FusedImage3.tif');  % Replace with your fused image file
-
 Td=2;       
 wt_min=0.001;
 P=1;        
