@@ -1,6 +1,6 @@
 # Multi-Sensor Medical Imaging Fusion Using Hybrid Filtering and Multi-Scale Adaptive Decomposition (HF-MSAD)
 
-This repository provides the full implementation of the **HF-MSAD framework** for multi-modal medical image fusion using hybrid spatial filtering and multi-scale adaptive decomposition. The technique is validated on CT–MRI image pairs to enhance clinical diagnosis through structure-preserving, contrast-enhanced fused images.
+This repository provides the full implementation of the **HF-MSAD framework** for multi-modal medical image fusion using hybrid spatial filtering and multi-scale adaptive decomposition. The technique is validated on multi-sensor image pairs to enhance structure-preserving, contrast-enhanced fused images.
 
 ---
 
@@ -8,44 +8,30 @@ This repository provides the full implementation of the **HF-MSAD framework** fo
 
 **Title:** Multi-Sensor Medical Image Fusion Using Hybrid Filtering and Multi-Scale Adaptive Decomposition Approach  
 **Authors:** Jashanpreet Kaur, Shalli Rani, Ayush Dogra, Mohammed Wasim Bhatt  
+**Language**: MATLAB (R2018a or higher)
 **Affiliation:** Chitkara University, Punjab (India) 
 
 
 ---
 
-##  Abstract
+##  Overview
 
-The proposed HF-MSAD framework fuses multi-modal medical images (e.g., CT and MRI) using a combination of **bilateral filtering**, **guided filtering**, **Gaussian high-pass filtering**, and **multi-scale adaptive fusion**. It addresses key challenges such as noise, edge blurring, and fine detail loss by decomposing input images into base and detail layers. The adaptive fusion pipeline enhances both low-frequency structures and high-frequency textures, resulting in superior fused outputs for clinical interpretation.
+This repository provides the MATLAB implementation of the proposed Hybrid Filtering with Multi-Scale Adaptive Decomposition (HF‑MSAD) framework for multi-sensor brain image fusion.
+The method integrates bilateral filtering, guided filtering, and a multi-scale adaptive fusion strategy to produce high-quality fused brain images that preserve both structural edges and soft-tissue contrast.
 
----
-
-## Features
-
-- Hybrid spatial filtering: Bilateral + Guided + GHPF
-- Adaptive weight-based fusion for base and detail layers
-- Maximum selection for high-frequency fusion
-- Final contrast enhancement using histogram stretching
-- Supports grayscale CT and MRI images
-- Ablation study and quantitative results provided
-- Evaluated using 8 performance metrics: API, AG, SD, SF, En, FS, CC, MI
+HF‑MSAD aims to address common limitations in existing fusion techniques, such as excessive blurring, edge loss, and artifact amplification, while maintaining computational efficiency and interpretability.
 
 ---
 
-## 🗂️ Repository Structure
-📁 Multi-Sensor-Medical-Imaging-Fusion1/
-├── main.m # Entry point: full fusion pipeline
-├── bilateral_filter.m # Bilateral filter implementation
-├── guided_filter.m # Guided filter implementation
-├── high_pass_filter.m # Gaussian HPF
-├── fusion_functions.m # Fusion strategies (base, detail, HP)
-├── contrast_enhancement.m # Final enhancement step
-├── evaluation_metrics.m # Metric calculation (API, SF, etc.)
-├── sample_data/
-│ ├── CT_MRI_Dataset1/
-│ ├── CT_MRI_Dataset2/
-│ └── CT_MRI_Dataset3/
-├── results/ # Stores fused outputs
-└── README.md # Project documentation
+
+
+---
+
+## Requirements
+
+MATLAB R2018a or later
+Image Processing Toolbox
+Registered brain image pairs (e.g., CT–MRI, PET–MRI, SPECT–MRI) in .tif format
 
 
 ---
@@ -74,3 +60,8 @@ We used **three publicly available multimodal datasets** (CT and MRI) for valida
    ```bash
    git clone https://github.com/jashanpreetkaur201996/Multi-Sensor-Medical-Imaging-Fusion1.git
    cd Multi-Sensor-Medical-Imaging-Fusion1
+
+
+
+For queries, collaborations, or feedback, please contact:
+📧 jashanpreetkaur201996@gmail.com
