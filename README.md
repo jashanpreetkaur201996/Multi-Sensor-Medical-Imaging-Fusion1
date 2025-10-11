@@ -31,18 +31,21 @@ HF‑MSAD aims to address common limitations in existing fusion techniques, such
 
 MATLAB R2018a or later
 Image Processing Toolbox
-Registered brain image pairs (e.g., CT–MRI, PET–MRI, SPECT–MRI) in .tif/.png format
+Pre-alligned brain image pairs (e.g., CT–MRI, PET–MRI, SPECT–MRI) in .tif/.png format
 
 
 ---
 
 ##  Datasets Used
 
-We used **three publicly available multimodal datasets** (CT and MRI) for validation. These are included as sample pairs in `sample_data/`. All images are grayscale and pre-registered.
+We used **six publicly available multi-sensor datasets** (CT,MRI,PET,SPECT) for validation.  All images are pre-alligned.
 
-- Dataset 1: T1-weighted MRI + non-contrast CT
-- Dataset 2: T2-weighted MRI + CT
-- Dataset 3: T1-weighted MRI + CT with calcifications
+- Dataset 1: Pair of CT (non-contrast) + T1-weighted MRI
+- Dataset 2: CT (non-contrast) + T2-weighted MRI
+- Dataset 3: T1-weighted MRI + CT (bony structure)
+- Dataset 4: Pair of T2-weighted MRI + T1-weighted MRI
+- Dataset 5: Pair of T2-weighted MRI + PET (functional)
+- Dataset 6: Pair of T2-weighted MRI + SPECT (functional)
 
 ---
 
