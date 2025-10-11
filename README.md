@@ -31,7 +31,7 @@ HF‑MSAD aims to address common limitations in existing fusion techniques, such
 
 MATLAB R2018a or later
 Image Processing Toolbox
-Registered brain image pairs (e.g., CT–MRI, PET–MRI, SPECT–MRI) in .tif format
+Registered brain image pairs (e.g., CT–MRI, PET–MRI, SPECT–MRI) in .tif/.png format
 
 
 ---
